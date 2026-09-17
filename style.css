@@ -11,6 +11,13 @@ html {
 
 html,
 body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html,
+body {
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -1018,6 +1025,25 @@ footer .copyright {
     .fynn-portret {
         width: 200px;
     }
+    
+    .quote-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.quote-item {
+    width: 100%;
+}
+
+.quote-item img {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+}
+    
 }
 ```
 
