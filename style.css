@@ -1,538 +1,222 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-background: #f4f1ea;
-color: #1c1c1a;
-font-family: "Inter", sans-serif;
-line-height: 1.7;
+    background: #f4f1ea;
+    color: #1c1c1a;
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
 }
 
-/* NAVIGATION */
+
+/* =========================================
+   NAVIGATION
+========================================= */
 
 .navbar {
-position: fixed;
-top: 0;
-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-```
-width: 100%;
-height: 78px;
+    width: 100%;
+    height: 78px;
 
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-padding: 0 6vw;
+    padding: 0 6vw;
 
-background: rgba(244, 241, 234, 0.92);
-backdrop-filter: blur(12px);
+    background: rgba(244, 241, 234, 0.92);
+    backdrop-filter: blur(12px);
 
-border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
 
-z-index: 100;
-```
-
+    z-index: 100;
 }
 
 .logo {
-font-family: "Cormorant Garamond", serif;
-font-size: 22px;
-font-weight: 600;
-letter-spacing: 3px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 
 nav {
-display: flex;
-gap: 35px;
+    display: flex;
+    gap: 35px;
 }
 
 nav a {
-color: #1c1c1a;
-text-decoration: none;
+    color: #1c1c1a;
+    text-decoration: none;
 
-```
-font-size: 13px;
-letter-spacing: 1px;
+    font-size: 13px;
+    letter-spacing: 1px;
 
-transition: opacity 0.3s ease;
-```
-
+    transition: opacity 0.3s ease;
 }
 
 nav a:hover {
-opacity: 0.5;
+    opacity: 0.5;
 }
 
-/* HERO */
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
-min-height: 100vh;
+    min-height: 100vh;
 
-```
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 
-position: relative;
+    position: relative;
 
-padding: 150px 12vw 100px;
+    padding: 150px 12vw 100px;
 
-border-bottom: 1px solid rgba(28, 28, 26, 0.15);
-```
-
+    border-bottom: 1px solid rgba(28, 28, 26, 0.15);
 }
 
 .hero-content {
-max-width: 850px;
+    max-width: 850px;
 }
 
 .eyebrow {
-font-size: 11px;
-letter-spacing: 4px;
-font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
 
-```
-color: #77746c;
+    color: #77746c;
 
-margin-bottom: 30px;
-```
-
-}
-
-.hero h1 {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: clamp(80px, 13vw, 180px);
-
-font-weight: 500;
-line-height: 0.75;
-
-letter-spacing: -5px;
-```
-
-}
-
-.hero h1 span {
-font-style: italic;
-font-weight: 400;
-}
-
-.subtitle {
-margin-top: 55px;
-
-```
-font-family: "Cormorant Garamond", serif;
-font-size: 28px;
-
-letter-spacing: 5px;
-```
-
-}
-
-.intro {
-max-width: 580px;
-
-```
-margin-top: 30px;
-
-font-size: 16px;
-color: #5e5b54;
-```
-
-}
-
-.button {
-display: inline-block;
-
-```
-margin-top: 40px;
-
-padding: 14px 25px;
-
-border: 1px solid #1c1c1a;
-
-color: #1c1c1a;
-
-text-decoration: none;
-
-font-size: 12px;
-letter-spacing: 2px;
-text-transform: uppercase;
-
-transition: all 0.3s ease;
-```
-
-}
-
-.button:hover {
-background: #1c1c1a;
-color: #f4f1ea;
-}
-
-/* SECTIONS */
-
-.section {
-max-width: 1250px;
-
-```
-margin: auto;
-
-padding: 150px 7vw;
-
-display: grid;
-grid-template-columns: 100px 1fr;
-
-gap: 50px;
-```
-
-}
-
-.section-number {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: 22px;
-
-color: #8c887e;
-```
-
-}
-
-.section-content {
-max-width: 900px;
-}
-
-.section h2 {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: clamp(50px, 6vw, 90px);
-
-font-weight: 500;
-
-line-height: 0.95;
-
-margin-bottom: 60px;
-```
-
-}
-
-.section h2 em {
-font-style: italic;
-}
-
-.section-content > p {
-max-width: 700px;
-
-```
-margin-bottom: 25px;
-
-color: #55524b;
-```
-
-}
-
-/* PHILOSOPHY */
-
-.philosophy {
-border-top: 1px solid rgba(28, 28, 26, 0.15);
-}
-
-.philosophy-grid {
-display: grid;
-
-```
-grid-template-columns: repeat(3, 1fr);
-
-gap: 30px;
-
-margin-top: 80px;
-```
-
-}
-
-.philosophy-grid article {
-border-top: 1px solid #aaa69c;
-
-```
-padding-top: 20px;
-```
-
-}
-
-.philosophy-grid span {
-font-size: 11px;
-letter-spacing: 2px;
-color: #88847a;
-}
-
-.philosophy-grid h3 {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: 34px;
-
-font-weight: 500;
-
-margin: 20px 0 10px;
-```
-
-}
-
-.philosophy-grid p {
-color: #68655e;
-font-size: 14px;
-}
-
-/* CRISIS */
-
-.crisis {
-background: #e9e5dc;
-
-```
-max-width: none;
-
-padding-left: 12vw;
-padding-right: 12vw;
-```
-
-}
-
-blockquote {
-margin: 60px 0;
-
-```
-padding-left: 35px;
-
-border-left: 2px solid #1c1c1a;
-
-font-family: "Cormorant Garamond", serif;
-
-font-size: 32px;
-
-line-height: 1.3;
-
-font-style: italic;
-```
-
-}
-
-.crisis-fact {
-margin-top: 70px;
-
-```
-display: flex;
-
-align-items: center;
-
-gap: 30px;
-
-border-top: 1px solid #aaa69c;
-
-border-bottom: 1px solid #aaa69c;
-
-padding: 30px 0;
-```
-
-}
-
-.crisis-fact strong {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: 55px;
-
-font-weight: 500;
-```
-
-}
-
-.crisis-fact span {
-max-width: 400px;
-
-```
-font-size: 13px;
-
-color: #66625a;
-```
-
-}
-
-/* QUOTES */
-
-.quotes {
-border-top: 1px solid rgba(28, 28, 26, 0.15);
-}
-
-.quote-list {
-margin-top: 80px;
-}
-
-.quote-list blockquote {
-margin: 0;
-
-```
-padding: 45px 0;
-
-border-left: none;
-
-border-bottom: 1px solid #aaa69c;
-```
-
-}
-
-.quote-list blockquote:first-child {
-border-top: 1px solid #aaa69c;
-}
-
-.quote-list p {
-max-width: 800px;
-
-```
-font-family: "Cormorant Garamond", serif;
-
-font-size: clamp(28px, 4vw, 48px);
-
-line-height: 1.15;
-
-font-style: italic;
-```
-
-}
-
-.quote-list cite {
-display: block;
-
-```
-margin-top: 20px;
-
-font-family: "Inter", sans-serif;
-
-font-size: 11px;
-
-letter-spacing: 1px;
-
-color: #77736a;
-
-font-style: normal;
-```
-
-}
-
-/* FOOTER */
-
-footer {
-padding: 100px 7vw;
-
-```
-border-top: 1px solid rgba(28, 28, 26, 0.15);
-
-text-align: center;
-```
-
-}
-
-.footer-title {
-font-family: "Cormorant Garamond", serif;
-
-```
-font-size: 50px;
-```
-
-}
-
-footer p {
-color: #77736a;
-
-```
-font-size: 12px;
-
-letter-spacing: 2px;
-
-margin-top: 10px;
-```
-
-}
-
-footer .copyright {
-margin-top: 40px;
-
-```
-font-size: 10px;
-
-letter-spacing: 1px;
-```
-
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-```
-.navbar {
-    padding: 0 25px;
-}
-
-nav {
-    display: none;
-}
-
-.hero {
-    padding: 140px 25px 80px;
-}
-
-.hero h1 {
-    font-size: 80px;
-}
-
-.section {
-    display: block;
-
-    padding: 100px 25px;
-}
-
-.section-number {
     margin-bottom: 30px;
 }
 
-.section h2 {
-    font-size: 55px;
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(80px, 13vw, 180px);
+
+    font-weight: 500;
+    line-height: 0.75;
+
+    letter-spacing: -5px;
 }
 
-.philosophy-grid {
-    grid-template-columns: 1fr;
+.hero h1 span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin-top: 55px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+
+    letter-spacing: 5px;
+}
+
+.intro {
+    max-width: 580px;
+
+    margin-top: 30px;
+
+    font-size: 16px;
+    color: #5e5b54;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 14px 25px;
+
+    border: 1px solid #1c1c1a;
+
+    color: #1c1c1a;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #1c1c1a;
+    color: #f4f1ea;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 150px 7vw;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
 
     gap: 50px;
 }
 
-.crisis {
-    padding-left: 25px;
-    padding-right: 25px;
+.section-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: #8c887e;
 }
 
-blockquote {
-    font-size: 27px;
+.section-content {
+    max-width: 900px;
 }
 
-.crisis-fact {
-    display: block;
+.section h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(50px, 6vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    margin-bottom: 60px;
 }
 
-.crisis-fact span {
-    display: block;
-    margin-top: 15px;
+.section h2 em {
+    font-style: italic;
 }
-  
-/* BIOGRAFIE */
+
+.section-content > p {
+    max-width: 700px;
+
+    margin-bottom: 25px;
+
+    color: #55524b;
+}
+
+
+/* =========================================
+   BIOGRAFIE
+========================================= */
 
 .biography {
     border-top: 1px solid rgba(28, 28, 26, 0.15);
@@ -540,7 +224,9 @@ blockquote {
 
 .biography h3 {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 42px;
+
     font-weight: 500;
 
     margin-top: 80px;
@@ -568,82 +254,9 @@ blockquote {
 }
 
 
-/* UITVINDINGEN */
-
-.inventions {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1px;
-
-    margin-top: 60px;
-
-    background: #aaa69c;
-
-    border: 1px solid #aaa69c;
-}
-
-.invention {
-    background: #f4f1ea;
-
-    padding: 35px;
-}
-
-.invention span {
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 20px;
-
-    color: #88847a;
-}
-
-.invention h4 {
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 30px;
-
-    font-weight: 500;
-
-    margin-top: 15px;
-}
-
-.invention small {
-    display: block;
-
-    margin-top: 5px;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    color: #88847a;
-}
-
-.invention p {
-    margin-top: 20px;
-
-    font-size: 13px;
-
-    color: #66625a;
-}
-
-
-/* MOBIEL */
-
-@media (max-width: 700px) {
-
-    .inventions {
-        grid-template-columns: 1fr;
-    }
-
-    .biography h3 {
-        font-size: 36px;
-    }
-
-}
-  
-/* BIOGRAFISCHE INFOBOX */
+/* =========================================
+   INFOBOX
+========================================= */
 
 .bio-infobox {
     float: right;
@@ -717,63 +330,304 @@ blockquote {
 }
 
 
-/* MOBIELE INFOBOX */
+/* =========================================
+   UITVINDINGEN
+========================================= */
 
-@media (max-width: 800px) {
+.inventions {
+    display: grid;
 
-    .bio-infobox {
-        float: none;
+    grid-template-columns: repeat(2, 1fr);
 
-        width: 100%;
+    gap: 1px;
 
-        margin: 0 0 50px 0;
-    }
+    margin-top: 60px;
 
+    background: #aaa69c;
+
+    border: 1px solid #aaa69c;
 }
-  
-  /* TIJDLIJN */
+
+.invention {
+    background: #f4f1ea;
+
+    padding: 35px;
+}
+
+.invention span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: #88847a;
+}
+
+.invention h4 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    margin-top: 15px;
+}
+
+.invention small {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #88847a;
+}
+
+.invention p {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #66625a;
+}
+
+
+/* =========================================
+   PHILOSOPHY
+========================================= */
+
+.philosophy {
+    border-top: 1px solid rgba(28, 28, 26, 0.15);
+}
+
+.philosophy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 80px;
+}
+
+.philosophy-grid article {
+    border-top: 1px solid #aaa69c;
+
+    padding-top: 20px;
+}
+
+.philosophy-grid span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #88847a;
+}
+
+.philosophy-grid h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    margin: 20px 0 10px;
+}
+
+.philosophy-grid p {
+    color: #68655e;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CRISIS
+========================================= */
+
+.crisis {
+    background: #e9e5dc;
+
+    max-width: none;
+
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+blockquote {
+    margin: 60px 0;
+
+    padding-left: 35px;
+
+    border-left: 2px solid #1c1c1a;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    line-height: 1.3;
+
+    font-style: italic;
+}
+
+.crisis-fact {
+    margin-top: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    border-top: 1px solid #aaa69c;
+
+    border-bottom: 1px solid #aaa69c;
+
+    padding: 30px 0;
+}
+
+.crisis-fact strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+}
+
+.crisis-fact span {
+    max-width: 400px;
+
+    font-size: 13px;
+
+    color: #66625a;
+}
+
+
+/* =========================================
+   QUOTES
+========================================= */
+
+.quotes {
+    border-top: 1px solid rgba(28, 28, 26, 0.15);
+}
+
+.quote-list {
+    margin-top: 80px;
+}
+
+.quote-list blockquote {
+    margin: 0;
+
+    padding: 45px 0;
+
+    border-left: none;
+
+    border-bottom: 1px solid #aaa69c;
+}
+
+.quote-list blockquote:first-child {
+    border-top: 1px solid #aaa69c;
+}
+
+.quote-list p {
+    max-width: 800px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(28px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    font-style: italic;
+}
+
+.quote-list cite {
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #77736a;
+
+    font-style: normal;
+}
+
+
+/* =========================================
+   TIJDLIJN
+========================================= */
 
 .timeline-section {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
     margin-top: 140px;
+
     padding-top: 100px;
 
     border-top: 1px solid #aaa69c;
 }
 
 .timeline-heading {
-    max-width: 650px;
-    margin-bottom: 100px;
+    width: 100%;
+
+    max-width: 850px;
+
+    margin-bottom: 110px;
+}
+
+.timeline-heading .eyebrow {
+    margin-bottom: 25px;
 }
 
 .timeline-heading h3 {
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(45px, 6vw, 75px);
+    font-size: clamp(48px, 6vw, 82px);
 
     font-weight: 500;
 
     line-height: 0.95;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .timeline-heading h3 em {
     font-style: italic;
 }
 
+/* Deze zorgt ervoor dat de tekst NIET
+   woord voor woord onder elkaar komt */
+
 .timeline-heading > p:last-child {
+    display: block;
+
+    width: 100%;
+
+    max-width: 700px;
+
     color: #66625a;
+
+    font-size: 16px;
+
+    line-height: 1.7;
 }
 
 
-/* DE LIJN */
+/* =========================================
+   TIJDLIJN LIJN
+========================================= */
 
 .timeline {
     position: relative;
 
     width: 100%;
 
-    padding-right: 170px;
+    padding-right: 190px;
 }
 
 .timeline::before {
@@ -782,7 +636,8 @@ blockquote {
     position: absolute;
 
     top: 0;
-    right: 80px;
+
+    right: 75px;
 
     width: 1px;
 
@@ -792,28 +647,25 @@ blockquote {
 }
 
 
-/* ITEMS */
+/* =========================================
+   TIJDLIJN ITEMS
+========================================= */
 
 .timeline-item {
     position: relative;
 
-    min-height: 180px;
-
-    padding-right: 100px;
-
-    margin-bottom: 90px;
-
     display: grid;
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 120px minmax(0, 650px);
 
-    gap: 40px;
+    gap: 45px;
 
-    align-items: start;
+    width: 100%;
+
+    min-height: 180px;
+
+    margin-bottom: 95px;
 }
-
-
-/* JAARTAL */
 
 .timeline-year {
     font-family: "Cormorant Garamond", serif;
@@ -822,42 +674,46 @@ blockquote {
 
     font-weight: 500;
 
+    line-height: 1;
+
     text-align: right;
 
     color: #77736a;
 }
 
-
-/* PUNT OP LIJN */
-
 .timeline-dot {
     position: absolute;
 
-    right: 74px;
+    top: 4px;
 
-    top: 10px;
+    right: 69px;
 
     width: 13px;
     height: 13px;
 
-    border: 2px solid #1c1c1a;
-
     background: #f4f1ea;
+
+    border: 2px solid #1c1c1a;
 
     border-radius: 50%;
 
     z-index: 2;
 }
 
-
-/* TEKST */
-
 .timeline-content {
-    max-width: 550px;
+    min-width: 0;
+
+    max-width: 650px;
 }
 
-.timeline-content span {
+.timeline-content > span {
+    display: block;
+
+    margin-bottom: 10px;
+
     font-size: 10px;
+
+    line-height: 1;
 
     letter-spacing: 3px;
 
@@ -867,28 +723,31 @@ blockquote {
 .timeline-content h4 {
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 36px;
+    font-size: 38px;
 
     font-weight: 500;
 
-    margin-top: 10px;
+    line-height: 1.05;
 
-    margin-bottom: 12px;
+    margin: 0 0 15px;
 }
 
 .timeline-content p {
-    font-size: 14px;
+    max-width: 600px;
+
+    margin: 0;
 
     color: #66625a;
+
+    font-size: 14px;
 
     line-height: 1.8;
 }
 
 
-/* BELANGRIJKE GEBEURTENISSEN */
+/* BELANGRIJKE GEBEURTENIS */
 
-.timeline-item.important .timeline-year,
-.timeline-item.important h4 {
+.timeline-item.important .timeline-year {
     color: #1c1c1a;
 }
 
@@ -896,9 +755,9 @@ blockquote {
     width: 17px;
     height: 17px;
 
-    right: 72px;
+    right: 67px;
 
-    top: 8px;
+    top: 2px;
 }
 
 .timeline-item.final {
@@ -909,28 +768,152 @@ blockquote {
     width: 19px;
     height: 19px;
 
-    right: 71px;
+    right: 66px;
 
-    top: 7px;
+    top: 1px;
 }
 
 
-/* QUOTES IN TIJDLIJN */
+/* QUOTE IN TIJDLIJN */
 
 .timeline-content blockquote {
-    margin: 30px 0 0 0;
+    margin: 35px 0 0;
 
     padding-left: 20px;
 
-    font-size: 22px;
+    font-family: "Cormorant Garamond", serif;
 
-    line-height: 1.35;
+    font-size: 25px;
+
+    line-height: 1.3;
 }
 
 
-/* MOBIEL */
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 100px 7vw;
+
+    border-top: 1px solid rgba(28, 28, 26, 0.15);
+
+    text-align: center;
+}
+
+.footer-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 50px;
+}
+
+footer p {
+    color: #77736a;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-top: 10px;
+}
+
+footer .copyright {
+    margin-top: 40px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MOBIEL
+========================================= */
 
 @media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 25px 80px;
+    }
+
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .section {
+        display: block;
+
+        padding: 100px 25px;
+    }
+
+    .section-number {
+        margin-bottom: 30px;
+    }
+
+    .section h2 {
+        font-size: 55px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .crisis {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    blockquote {
+        font-size: 27px;
+    }
+
+    .crisis-fact {
+        display: block;
+    }
+
+    .crisis-fact span {
+        display: block;
+
+        margin-top: 15px;
+    }
+
+
+    /* INFOBOX */
+
+    .bio-infobox {
+        float: none;
+
+        width: 100%;
+
+        margin: 0 0 50px 0;
+    }
+
+
+    /* BIOGRAFIE */
+
+    .biography h3 {
+        font-size: 36px;
+    }
+
+
+    /* UITVINDINGEN */
+
+    .inventions {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* TIJDLIJN */
 
     .timeline {
         padding-right: 50px;
@@ -972,5 +955,16 @@ blockquote {
         font-size: 30px;
     }
 
-}
+    .timeline-heading {
+        margin-bottom: 70px;
+    }
+
+    .timeline-heading h3 {
+        font-size: 55px;
+    }
+
+    .timeline-heading > p:last-child {
+        max-width: 100%;
+    }
+
 }
