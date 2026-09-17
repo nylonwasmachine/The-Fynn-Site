@@ -988,5 +988,13 @@ footer .copyright {
     .timeline-heading > p:last-child {
         max-width: 100%;
     }
-
+    
+.fynn-portret {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 40px 0;
+}
+    
 }
