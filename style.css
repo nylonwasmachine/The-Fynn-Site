@@ -642,5 +642,92 @@ blockquote {
     }
 
 }
+  
+/* BIOGRAFISCHE INFOBOX */
 
+.bio-infobox {
+    float: right;
+
+    width: 300px;
+
+    margin-left: 50px;
+    margin-bottom: 40px;
+
+    border: 1px solid #aaa69c;
+
+    background: #ebe7de;
+}
+
+.infobox-title {
+    padding: 18px 20px;
+
+    background: #1c1c1a;
+
+    color: #f4f1ea;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.infobox-subtitle {
+    padding: 10px 20px;
+
+    border-bottom: 1px solid #aaa69c;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    color: #77736a;
+}
+
+.infobox-row {
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #c9c5bb;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+.infobox-row:last-child {
+    border-bottom: none;
+}
+
+.infobox-row span {
+    color: #77736a;
+}
+
+.infobox-row strong {
+    font-weight: 500;
+}
+
+
+/* MOBIELE INFOBOX */
+
+@media (max-width: 800px) {
+
+    .bio-infobox {
+        float: none;
+
+        width: 100%;
+
+        margin: 0 0 50px 0;
+    }
+
+}
 }
