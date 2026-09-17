@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 78px;
 
@@ -213,6 +213,23 @@ nav a:hover {
     color: #55524b;
 }
 
+
+/* =========================================
+   PORTRET FYNN
+========================================= */
+
+.fynn-portret {
+    display: block;
+
+    width: 200px;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 0 40px 0;
+}
+
+
 /* =========================================
    BIOGRAFIE
 ========================================= */
@@ -222,14 +239,13 @@ nav a:hover {
 
     border-top: 1px solid rgba(28, 28, 26, 0.15);
 
-    /* Zorgt ervoor dat de normale
-       2-koloms indeling behouden blijft */
     grid-template-columns: 100px minmax(0, 1fr);
 }
 
 .biography .section-content {
     min-width: 0;
     max-width: 1050px;
+
     padding-right: 330px;
 }
 
@@ -344,6 +360,7 @@ nav a:hover {
     font-weight: 500;
 }
 
+
 /* =========================================
    UITVINDINGEN
 ========================================= */
@@ -434,6 +451,7 @@ nav a:hover {
 .philosophy-grid span {
     font-size: 11px;
     letter-spacing: 2px;
+
     color: #88847a;
 }
 
@@ -492,7 +510,6 @@ blockquote {
     gap: 30px;
 
     border-top: 1px solid #aaa69c;
-
     border-bottom: 1px solid #aaa69c;
 
     padding: 30px 0;
@@ -613,9 +630,6 @@ blockquote {
 .timeline-heading h3 em {
     font-style: italic;
 }
-
-/* Deze zorgt ervoor dat de tekst NIET
-   woord voor woord onder elkaar komt */
 
 .timeline-heading > p:last-child {
     display: block;
@@ -759,7 +773,9 @@ blockquote {
 }
 
 
-/* BELANGRIJKE GEBEURTENIS */
+/* =========================================
+   BELANGRIJKE GEBEURTENIS
+========================================= */
 
 .timeline-item.important .timeline-year {
     color: #1c1c1a;
@@ -788,7 +804,9 @@ blockquote {
 }
 
 
-/* QUOTE IN TIJDLIJN */
+/* =========================================
+   QUOTE IN TIJDLIJN
+========================================= */
 
 .timeline-content blockquote {
     margin: 35px 0 0;
@@ -904,8 +922,6 @@ footer .copyright {
 
     /* INFOBOX */
 
-  @media (max-width: 800px) {
-
     .biography {
         display: block;
     }
@@ -918,10 +934,12 @@ footer .copyright {
         margin: 0 0 50px 0;
     }
 
-}
-
 
     /* BIOGRAFIE */
+
+    .biography .section-content {
+        padding-right: 0;
+    }
 
     .biography h3 {
         font-size: 36px;
@@ -988,13 +1006,27 @@ footer .copyright {
     .timeline-heading > p:last-child {
         max-width: 100%;
     }
-    
-.fynn-portret {
-    display: block;
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 0 40px 0;
+
+    /* PORTRET OP MOBIEL */
+
+    .fynn-portret {
+        width: 200px;
+    }
 }
-    
-}
+```
+
+Daarna hoef je in je `index.html` niets aan je afbeelding te veranderen, zolang je dit hebt:
+
+```html
+<img
+    src="Fynn_Booisma_Filosoof.png"
+    alt="Fynn Booisma"
+    class="fynn-portret"
+>
+```
+
+En zorg dat `Fynn_Booisma_Filosoof.png` naast `index.html` in GitHub staat.
+
+**Nu is de afbeelding 200px breed op desktop én mobiel.** Als je hem bijvoorbeeld 300px wilt, verander je alleen `width: 200px;` bij `PORTRET FYNN` naar `width: 300px;`.
+
+Post daarna op GitHub je wijzigingen met **Commit changes**. De GitHub Pages-site kan soms even nodig hebben om de nieuwe versie te tonen.
