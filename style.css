@@ -213,13 +213,23 @@ nav a:hover {
     color: #55524b;
 }
 
-
 /* =========================================
    BIOGRAFIE
 ========================================= */
 
 .biography {
+    position: relative;
+
     border-top: 1px solid rgba(28, 28, 26, 0.15);
+
+    /* Zorgt ervoor dat de normale
+       2-koloms indeling behouden blijft */
+    grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.biography .section-content {
+    min-width: 0;
+    max-width: 900px;
 }
 
 .biography h3 {
@@ -259,16 +269,20 @@ nav a:hover {
 ========================================= */
 
 .bio-infobox {
-    float: right;
+    position: absolute;
+
+    top: 150px;
+    right: 7vw;
 
     width: 300px;
 
-    margin-left: 50px;
-    margin-bottom: 40px;
+    margin: 0;
 
     border: 1px solid #aaa69c;
 
     background: #ebe7de;
+
+    z-index: 5;
 }
 
 .infobox-title {
@@ -328,7 +342,6 @@ nav a:hover {
 .infobox-row strong {
     font-weight: 500;
 }
-
 
 /* =========================================
    UITVINDINGEN
@@ -890,13 +903,21 @@ footer .copyright {
 
     /* INFOBOX */
 
+  @media (max-width: 800px) {
+
+    .biography {
+        display: block;
+    }
+
     .bio-infobox {
-        float: none;
+        position: static;
 
         width: 100%;
 
         margin: 0 0 50px 0;
     }
+
+}
 
 
     /* BIOGRAFIE */
