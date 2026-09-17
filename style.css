@@ -37,7 +37,7 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     padding: 0 6vw;
 
@@ -54,6 +54,8 @@ body {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 3px;
+
+    margin-right: 40px;
 }
 
 nav {
