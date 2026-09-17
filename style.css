@@ -16,12 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-html,
-body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
-
 body {
     background: #f4f1ea;
     color: #1c1c1a;
@@ -64,7 +58,8 @@ body {
 
 nav {
     display: flex;
-    gap: 35px;
+    align-items: center;
+    gap: 28px;
 }
 
 nav a {
@@ -73,6 +68,8 @@ nav a {
 
     font-size: 13px;
     letter-spacing: 1px;
+
+    white-space: nowrap;
 
     transition: opacity 0.3s ease;
 }
@@ -554,49 +551,26 @@ blockquote {
 }
 
 .quote-list {
-    margin-top: 80px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 60px;
+
+    margin-top: 50px;
 }
 
-.quote-list blockquote {
-    margin: 0;
-
-    padding: 45px 0;
-
-    border-left: none;
-
-    border-bottom: 1px solid #aaa69c;
+.quote-item {
+    width: 100%;
 }
 
-.quote-list blockquote:first-child {
-    border-top: 1px solid #aaa69c;
-}
-
-.quote-list p {
-    max-width: 800px;
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: clamp(28px, 4vw, 48px);
-
-    line-height: 1.15;
-
-    font-style: italic;
-}
-
-.quote-list cite {
+.quote-item img {
     display: block;
 
-    margin-top: 20px;
+    width: 100%;
+    max-width: 850px;
 
-    font-family: "Inter", sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-
-    color: #77736a;
-
-    font-style: normal;
+    height: auto;
 }
 
 
@@ -878,20 +852,49 @@ footer .copyright {
 @media (max-width: 800px) {
 
     .navbar {
-        padding: 0 25px;
+        height: auto;
+        min-height: 78px;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
     }
 
     nav {
-        display: none;
+        display: flex;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
     }
 
+    nav a {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+    }
+
+
+    /* HERO */
+
     .hero {
-        padding: 140px 25px 80px;
+        padding: 170px 25px 80px;
     }
 
     .hero h1 {
         font-size: 80px;
     }
+
+
+    /* SECTIONS */
 
     .section {
         display: block;
@@ -907,11 +910,17 @@ footer .copyright {
         font-size: 55px;
     }
 
+
+    /* FILOSOFIE */
+
     .philosophy-grid {
         grid-template-columns: 1fr;
 
         gap: 50px;
     }
+
+
+    /* CRISIS */
 
     .crisis {
         padding-left: 25px;
@@ -963,6 +972,20 @@ footer .copyright {
 
     .inventions {
         grid-template-columns: 1fr;
+    }
+
+
+    /* CITATEN */
+
+    .quote-list {
+        gap: 35px;
+
+        margin-top: 40px;
+    }
+
+    .quote-item img {
+        width: 100%;
+        max-width: 100%;
     }
 
 
@@ -1020,45 +1043,31 @@ footer .copyright {
         max-width: 100%;
     }
 
-    /* PORTRET OP MOBIEL */
+
+    /* PORTRET */
 
     .fynn-portret {
         width: 200px;
     }
-    
-    .quote-list {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 50px;
-}
-
-.quote-item {
-    width: 100%;
-}
-
-.quote-item img {
-    display: block;
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-}
-    
 }
 ```
 
-Daarna hoef je in je `index.html` niets aan je afbeelding te veranderen, zolang je dit hebt:
+En nog één belangrijke wijziging in je `index.html`: haal helemaal onderaan, vlak vóór `</body>`, dit weg:
 
 ```html
-<img
-    src="Fynn_Booisma_Filosoof.png"
-    alt="Fynn Booisma"
-    class="fynn-portret"
->
+.fynn-portret {
+    display: block;
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 55px 0;
+}
 ```
 
-En zorg dat `Fynn_Booisma_Filosoof.png` naast `index.html` in GitHub staat.
+Dat is CSS en hoort niet in je HTML.
 
-**Nu is de afbeelding 200px breed op desktop én mobiel.** Als je hem bijvoorbeeld 300px wilt, verander je alleen `width: 200px;` bij `PORTRET FYNN` naar `width: 300px;`.
+Je `Citaten`-knop staat daarna op desktop én mobiel in de navigatie:
 
-Post daarna op GitHub je wijzigingen met **Commit changes**. De GitHub Pages-site kan soms even nodig hebben om de nieuwe versie te tonen.
+`Over | Zijn leven | Filosofie | 2038 | Citaten`
+
+En de vier afbeeldingen worden gebruikt in plaats van de tekst in de aparte citatensectie.
